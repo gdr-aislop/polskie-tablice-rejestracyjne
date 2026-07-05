@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.SearchOff
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -33,6 +34,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import pl.tablice.lookup.R
 import pl.tablice.lookup.viewmodel.PlateViewModel
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PlateSearchScreen(viewModel: PlateViewModel = viewModel()) {
     val uiState by viewModel.uiState.collectAsState()
