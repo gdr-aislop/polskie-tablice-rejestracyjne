@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tablice PL</string>
+    <string name="search_label">Wpisz oznaczenie tablicy</string>
+    <string name="search_placeholder">np. KR</string>
+    <string name="no_results">Nie znaleziono takiego oznaczenia</string>
+
+    <plurals name="matches_count">
+        <item quantity="one">%d dopasowanie</item>
+        <item quantity="few">%d dopasowania</item>
+        <item quantity="many">%d dopasowań</item>
+        <item quantity="other">%d dopasowania</item>
+    </plurals>
+</resources>

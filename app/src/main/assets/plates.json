@@ -1,0 +1,4343 @@
+{
+  "opis": "Mapowanie wyróżników (kodów) tablic rejestracyjnych na województwa i powiaty w Polsce",
+  "zrodlo_pierwotne": "Załącznik do rozporządzenia Ministra Infrastruktury w sprawie rejestracji i oznaczania pojazdów, wymagań dla tablic rejestracyjnych oraz wzorów innych dokumentów związanych z rejestracją pojazdów (Dziennik Ustaw / ISAP)",
+  "zrodlo_transkrypcji": "https://samorzad.pap.pl/sites/default/files/2024-01/wyr%C3%B3%C5%BCniki-powiaty.pdf",
+  "stan_na": "lipiec 2026 — bazowy dokument źródłowy pochodzi ze stycznia 2024 i został ręcznie uzupełniony o zmiany z 2026 r. (patrz 'aktualizacje_2026' oraz pola 'uwaga' i 'wyroznik_powiatu_2026' przy poszczególnych jednostkach); zweryfikuj najnowsze zmiany w Dzienniku Ustaw / ISAP przed użyciem produkcyjnym",
+  "uwagi": [
+    "Pełny kod tablicy = wyróżnik województwa (1 litera, lub jedna z dwóch liter, jeśli podano) + wyróżnik powiatu (1-3 znaki).",
+    "Niektóre województwa mają DWA wyróżniki (np. D i V dla dolnośląskiego) — druga litera jest wykorzystywana po wyczerpaniu puli numerów dla pierwszej. Dotyczy: dolnośląskiego (D,V), małopolskiego (K,J), mazowieckiego (W,A), podkarpackiego (R,Y), śląskiego (S,I), pomorskiego (G,X), wielkopolskiego (P,M).",
+    "m.st. Warszawa ma odrębne wyróżniki dla poszczególnych dzielnic (pole 'wyroznik_powiatu' zawiera te 15 liter); pełne kody łączą je z W lub A — patrz szczegółowa 'uwaga' w samym wpisie Warszawy, w tym opis odrębnej puli dla tablic ZMNIEJSZONYCH.",
+    "Traktuj ten plik jako punkt startowy / dane pomocnicze, NIE jako formalne źródło prawa — do zastosowań wymagających pewności prawnej sięgnij do aktualnego tekstu rozporządzenia w ISAP (isap.sejm.gov.pl) lub Dzienniku Ustaw."
+  ],
+  "aktualizacje_2026": [
+    {
+      "opis": "Nowe wyróżniki dla powiatu chełmińskiego (woj. kujawsko-pomorskie): CCE i CCM, obok dotychczasowego CCH (pula CCH wyczerpana).",
+      "jednostka": "chełmiński",
+      "wojewodztwo": "kujawsko-pomorskie",
+      "nowe_kody": [
+        "CCE",
+        "CCM"
+      ]
+    },
+    {
+      "opis": "Nowe wyróżniki dla powiatu tarnogórskiego (woj. śląskie): STR i STN (tablice zwyczajne) oraz ITR i ITN (tablice zabytkowe), obok dotychczasowych STA/ITA.",
+      "jednostka": "tarnogórski",
+      "wojewodztwo": "śląskie",
+      "nowe_kody": [
+        "STR",
+        "STN",
+        "ITR",
+        "ITN"
+      ]
+    },
+    {
+      "opis": "Warszawa: od ok. 2023-2024 r. w miarę wyczerpywania puli 'W'+litera_dzielnicy dla poszczególnych dzielnic (najszybciej Mokotów) uruchamiana jest równoległa pula z drugą literą województwa 'A' (np. AE dla Mokotowa zamiast WE). Docelowo (szacunkowo za 2-3 lata od 2023 r.) wszystkie NOWE rejestracje w Warszawie mają zacząć się od 'A'. Osobno, na tablicach ZMNIEJSZONYCH (4-znakowych) wyróżnikiem miejsca jest tylko jedna litera województwa bez litery dzielnicy — tu też w Warszawie zaczęto wydawać 'A' zamiast 'W' (pierwsze takie tablice pojawiły się w 2023 r., ok. 50 sztuk odnotowanych przez CEPiK).",
+      "jednostka": "m.st. Warszawa",
+      "wojewodztwo": "mazowieckie",
+      "nowe_kody": "patrz pole 'pelne_kody' wpisu Warszawy (już zawiera warianty z A) oraz opis odrębnej puli dla tablic zmniejszonych"
+    }
+  ],
+  "wojewodztwa": [
+    {
+      "wojewodztwo": "dolnośląskie",
+      "wyroznik_wojewodztwa": [
+        "D",
+        "V"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Jelenia Góra",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "J"
+          ],
+          "pelne_kody": [
+            "DJ",
+            "VJ"
+          ]
+        },
+        {
+          "nazwa": "Legnica",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "L"
+          ],
+          "pelne_kody": [
+            "DL",
+            "VL"
+          ]
+        },
+        {
+          "nazwa": "Wałbrzych",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "B"
+          ],
+          "pelne_kody": [
+            "DB",
+            "VB"
+          ]
+        },
+        {
+          "nazwa": "Wrocław",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "W",
+            "X"
+          ],
+          "pelne_kody": [
+            "DW",
+            "DX",
+            "VW",
+            "VX"
+          ]
+        },
+        {
+          "nazwa": "bolesławiecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BL"
+          ],
+          "pelne_kody": [
+            "DBL",
+            "VBL"
+          ]
+        },
+        {
+          "nazwa": "dzierżoniowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "DZ"
+          ],
+          "pelne_kody": [
+            "DDZ",
+            "VDZ"
+          ]
+        },
+        {
+          "nazwa": "głogowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GL"
+          ],
+          "pelne_kody": [
+            "DGL",
+            "VGL"
+          ]
+        },
+        {
+          "nazwa": "górowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GR"
+          ],
+          "pelne_kody": [
+            "DGR",
+            "VGR"
+          ]
+        },
+        {
+          "nazwa": "jaworski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "JA"
+          ],
+          "pelne_kody": [
+            "DJA",
+            "VJA"
+          ]
+        },
+        {
+          "nazwa": "karkonoski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "JE"
+          ],
+          "pelne_kody": [
+            "DJE",
+            "VJE"
+          ]
+        },
+        {
+          "nazwa": "kamiennogórski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KA"
+          ],
+          "pelne_kody": [
+            "DKA",
+            "VKA"
+          ]
+        },
+        {
+          "nazwa": "kłodzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KL"
+          ],
+          "pelne_kody": [
+            "DKL",
+            "VKL"
+          ]
+        },
+        {
+          "nazwa": "legnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LE"
+          ],
+          "pelne_kody": [
+            "DLE",
+            "VLE"
+          ]
+        },
+        {
+          "nazwa": "lubański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LB"
+          ],
+          "pelne_kody": [
+            "DLB",
+            "VLB"
+          ]
+        },
+        {
+          "nazwa": "lubiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LU"
+          ],
+          "pelne_kody": [
+            "DLU",
+            "VLU"
+          ]
+        },
+        {
+          "nazwa": "lwówecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LW"
+          ],
+          "pelne_kody": [
+            "DLW",
+            "VLW"
+          ]
+        },
+        {
+          "nazwa": "milicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MI"
+          ],
+          "pelne_kody": [
+            "DMI",
+            "VMI"
+          ]
+        },
+        {
+          "nazwa": "oleśnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OL"
+          ],
+          "pelne_kody": [
+            "DOL",
+            "VOL"
+          ]
+        },
+        {
+          "nazwa": "oławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OA"
+          ],
+          "pelne_kody": [
+            "DOA",
+            "VOA"
+          ]
+        },
+        {
+          "nazwa": "polkowicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PL"
+          ],
+          "pelne_kody": [
+            "DPL",
+            "VPL"
+          ]
+        },
+        {
+          "nazwa": "strzeliński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ST"
+          ],
+          "pelne_kody": [
+            "DST",
+            "VST"
+          ]
+        },
+        {
+          "nazwa": "średzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SR"
+          ],
+          "pelne_kody": [
+            "DSR",
+            "VSR"
+          ]
+        },
+        {
+          "nazwa": "świdnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SW"
+          ],
+          "pelne_kody": [
+            "DSW",
+            "VSW"
+          ]
+        },
+        {
+          "nazwa": "trzebnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TR"
+          ],
+          "pelne_kody": [
+            "DTR",
+            "VTR"
+          ]
+        },
+        {
+          "nazwa": "wałbrzyski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BA"
+          ],
+          "pelne_kody": [
+            "DBA",
+            "VBA"
+          ]
+        },
+        {
+          "nazwa": "wołowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WL"
+          ],
+          "pelne_kody": [
+            "DWL",
+            "VWL"
+          ]
+        },
+        {
+          "nazwa": "wrocławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WR"
+          ],
+          "pelne_kody": [
+            "DWR",
+            "VWR"
+          ]
+        },
+        {
+          "nazwa": "ząbkowicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZA"
+          ],
+          "pelne_kody": [
+            "DZA",
+            "VZA"
+          ]
+        },
+        {
+          "nazwa": "zgorzelecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZG"
+          ],
+          "pelne_kody": [
+            "DZG",
+            "VZG"
+          ]
+        },
+        {
+          "nazwa": "złotoryjski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZL"
+          ],
+          "pelne_kody": [
+            "DZL",
+            "VZL"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "kujawsko-pomorskie",
+      "wyroznik_wojewodztwa": [
+        "C"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Bydgoszcz",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "B"
+          ],
+          "pelne_kody": [
+            "CB"
+          ]
+        },
+        {
+          "nazwa": "Grudziądz",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "G"
+          ],
+          "pelne_kody": [
+            "CG"
+          ]
+        },
+        {
+          "nazwa": "Toruń",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "T"
+          ],
+          "pelne_kody": [
+            "CT"
+          ]
+        },
+        {
+          "nazwa": "Włocławek",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "W"
+          ],
+          "pelne_kody": [
+            "CW"
+          ]
+        },
+        {
+          "nazwa": "aleksandrowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "AL"
+          ],
+          "pelne_kody": [
+            "CAL"
+          ]
+        },
+        {
+          "nazwa": "brodnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BR"
+          ],
+          "pelne_kody": [
+            "CBR"
+          ]
+        },
+        {
+          "nazwa": "bydgoski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BY",
+            "BC"
+          ],
+          "pelne_kody": [
+            "CBY",
+            "CBC"
+          ]
+        },
+        {
+          "nazwa": "chełmiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CH",
+            "CE",
+            "CM"
+          ],
+          "pelne_kody": [
+            "CCH",
+            "CCE",
+            "CCM"
+          ],
+          "wyroznik_powiatu_2026": [
+            "CE",
+            "CM"
+          ],
+          "uwaga": "Wyróżniki CCE i CCM wprowadzone w 2026 r. jako dodatkowe do dotychczasowego CCH (pula CCH się wyczerpała)."
+        },
+        {
+          "nazwa": "golubsko-dobrzyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GD"
+          ],
+          "pelne_kody": [
+            "CGD"
+          ]
+        },
+        {
+          "nazwa": "grudziądzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GR"
+          ],
+          "pelne_kody": [
+            "CGR"
+          ]
+        },
+        {
+          "nazwa": "inowrocławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "IN"
+          ],
+          "pelne_kody": [
+            "CIN"
+          ]
+        },
+        {
+          "nazwa": "lipnowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LI"
+          ],
+          "pelne_kody": [
+            "CLI"
+          ]
+        },
+        {
+          "nazwa": "mogileński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MG"
+          ],
+          "pelne_kody": [
+            "CMG"
+          ]
+        },
+        {
+          "nazwa": "nakielski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NA"
+          ],
+          "pelne_kody": [
+            "CNA"
+          ]
+        },
+        {
+          "nazwa": "radziejowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RA"
+          ],
+          "pelne_kody": [
+            "CRA"
+          ]
+        },
+        {
+          "nazwa": "rypiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RY"
+          ],
+          "pelne_kody": [
+            "CRY"
+          ]
+        },
+        {
+          "nazwa": "sępoleński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SE"
+          ],
+          "pelne_kody": [
+            "CSE"
+          ]
+        },
+        {
+          "nazwa": "świecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SW"
+          ],
+          "pelne_kody": [
+            "CSW"
+          ]
+        },
+        {
+          "nazwa": "toruński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TR"
+          ],
+          "pelne_kody": [
+            "CTR"
+          ]
+        },
+        {
+          "nazwa": "tucholski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TU"
+          ],
+          "pelne_kody": [
+            "CTU"
+          ]
+        },
+        {
+          "nazwa": "wąbrzeski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WA"
+          ],
+          "pelne_kody": [
+            "CWA"
+          ]
+        },
+        {
+          "nazwa": "włocławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WL"
+          ],
+          "pelne_kody": [
+            "CWL"
+          ]
+        },
+        {
+          "nazwa": "żniński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZN"
+          ],
+          "pelne_kody": [
+            "CZN"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "lubelskie",
+      "wyroznik_wojewodztwa": [
+        "L"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Biała Podlaska",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "B"
+          ],
+          "pelne_kody": [
+            "LB"
+          ]
+        },
+        {
+          "nazwa": "Chełm",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "C"
+          ],
+          "pelne_kody": [
+            "LC"
+          ]
+        },
+        {
+          "nazwa": "Lublin",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "U"
+          ],
+          "pelne_kody": [
+            "LU"
+          ]
+        },
+        {
+          "nazwa": "Zamość",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "Z"
+          ],
+          "pelne_kody": [
+            "LZ"
+          ]
+        },
+        {
+          "nazwa": "bialski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BI"
+          ],
+          "pelne_kody": [
+            "LBI"
+          ]
+        },
+        {
+          "nazwa": "biłgorajski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BL"
+          ],
+          "pelne_kody": [
+            "LBL"
+          ]
+        },
+        {
+          "nazwa": "chełmski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CH"
+          ],
+          "pelne_kody": [
+            "LCH"
+          ]
+        },
+        {
+          "nazwa": "hrubieszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "HR"
+          ],
+          "pelne_kody": [
+            "LHR"
+          ]
+        },
+        {
+          "nazwa": "janowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "JA"
+          ],
+          "pelne_kody": [
+            "LJA"
+          ]
+        },
+        {
+          "nazwa": "krasnostawski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KS"
+          ],
+          "pelne_kody": [
+            "LKS"
+          ]
+        },
+        {
+          "nazwa": "kraśnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KR"
+          ],
+          "pelne_kody": [
+            "LKR"
+          ]
+        },
+        {
+          "nazwa": "lubartowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LB"
+          ],
+          "pelne_kody": [
+            "LLB"
+          ]
+        },
+        {
+          "nazwa": "lubelski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "UB"
+          ],
+          "pelne_kody": [
+            "LUB"
+          ]
+        },
+        {
+          "nazwa": "łęczyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LE"
+          ],
+          "pelne_kody": [
+            "LLE"
+          ]
+        },
+        {
+          "nazwa": "łukowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LU"
+          ],
+          "pelne_kody": [
+            "LLU"
+          ]
+        },
+        {
+          "nazwa": "opolski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OP"
+          ],
+          "pelne_kody": [
+            "LOP"
+          ]
+        },
+        {
+          "nazwa": "parczewski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PA"
+          ],
+          "pelne_kody": [
+            "LPA"
+          ]
+        },
+        {
+          "nazwa": "puławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PU"
+          ],
+          "pelne_kody": [
+            "LPU"
+          ]
+        },
+        {
+          "nazwa": "radzyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RA"
+          ],
+          "pelne_kody": [
+            "LRA"
+          ]
+        },
+        {
+          "nazwa": "rycki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RY"
+          ],
+          "pelne_kody": [
+            "LRY"
+          ]
+        },
+        {
+          "nazwa": "świdnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SW"
+          ],
+          "pelne_kody": [
+            "LSW"
+          ]
+        },
+        {
+          "nazwa": "tomaszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TM"
+          ],
+          "pelne_kody": [
+            "LTM"
+          ]
+        },
+        {
+          "nazwa": "włodawski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WL"
+          ],
+          "pelne_kody": [
+            "LWL"
+          ]
+        },
+        {
+          "nazwa": "zamojski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZA"
+          ],
+          "pelne_kody": [
+            "LZA"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "lubuskie",
+      "wyroznik_wojewodztwa": [
+        "F"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Gorzów Wielkopolski",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "G"
+          ],
+          "pelne_kody": [
+            "FG"
+          ]
+        },
+        {
+          "nazwa": "Zielona Góra",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "Z"
+          ],
+          "pelne_kody": [
+            "FZ"
+          ]
+        },
+        {
+          "nazwa": "gorzowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GW"
+          ],
+          "pelne_kody": [
+            "FGW"
+          ]
+        },
+        {
+          "nazwa": "krośnieński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KR"
+          ],
+          "pelne_kody": [
+            "FKR"
+          ]
+        },
+        {
+          "nazwa": "międzyrzecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MI"
+          ],
+          "pelne_kody": [
+            "FMI"
+          ]
+        },
+        {
+          "nazwa": "nowosolski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NW"
+          ],
+          "pelne_kody": [
+            "FNW"
+          ]
+        },
+        {
+          "nazwa": "słubicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SL"
+          ],
+          "pelne_kody": [
+            "FSL"
+          ]
+        },
+        {
+          "nazwa": "strzelecko-drezdenecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SD"
+          ],
+          "pelne_kody": [
+            "FSD"
+          ]
+        },
+        {
+          "nazwa": "sulęciński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SU"
+          ],
+          "pelne_kody": [
+            "FSU"
+          ]
+        },
+        {
+          "nazwa": "świebodziński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SW"
+          ],
+          "pelne_kody": [
+            "FSW"
+          ]
+        },
+        {
+          "nazwa": "wschowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WS"
+          ],
+          "pelne_kody": [
+            "FWS"
+          ]
+        },
+        {
+          "nazwa": "zielonogórski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZI"
+          ],
+          "pelne_kody": [
+            "FZI"
+          ]
+        },
+        {
+          "nazwa": "żagański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZG"
+          ],
+          "pelne_kody": [
+            "FZG"
+          ]
+        },
+        {
+          "nazwa": "żarski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZA"
+          ],
+          "pelne_kody": [
+            "FZA"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "łódzkie",
+      "wyroznik_wojewodztwa": [
+        "E"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Łódź",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "L",
+            "D"
+          ],
+          "pelne_kody": [
+            "EL",
+            "ED"
+          ]
+        },
+        {
+          "nazwa": "Piotrków Trybunalski",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "P"
+          ],
+          "pelne_kody": [
+            "EP"
+          ]
+        },
+        {
+          "nazwa": "Skierniewice",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "S"
+          ],
+          "pelne_kody": [
+            "ES"
+          ]
+        },
+        {
+          "nazwa": "brzeziński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BR"
+          ],
+          "pelne_kody": [
+            "EBR"
+          ]
+        },
+        {
+          "nazwa": "bełchatowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BE"
+          ],
+          "pelne_kody": [
+            "EBE"
+          ]
+        },
+        {
+          "nazwa": "kutnowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KU"
+          ],
+          "pelne_kody": [
+            "EKU"
+          ]
+        },
+        {
+          "nazwa": "łaski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LA"
+          ],
+          "pelne_kody": [
+            "ELA"
+          ]
+        },
+        {
+          "nazwa": "łęczycki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LE"
+          ],
+          "pelne_kody": [
+            "ELE"
+          ]
+        },
+        {
+          "nazwa": "łowicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LC"
+          ],
+          "pelne_kody": [
+            "ELC"
+          ]
+        },
+        {
+          "nazwa": "łódzki wschodni",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LW"
+          ],
+          "pelne_kody": [
+            "ELW"
+          ]
+        },
+        {
+          "nazwa": "opoczyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OP"
+          ],
+          "pelne_kody": [
+            "EOP"
+          ]
+        },
+        {
+          "nazwa": "pabianicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PA"
+          ],
+          "pelne_kody": [
+            "EPA"
+          ]
+        },
+        {
+          "nazwa": "pajęczański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PJ"
+          ],
+          "pelne_kody": [
+            "EPJ"
+          ]
+        },
+        {
+          "nazwa": "piotrkowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PI"
+          ],
+          "pelne_kody": [
+            "EPI"
+          ]
+        },
+        {
+          "nazwa": "poddębicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PD"
+          ],
+          "pelne_kody": [
+            "EPD"
+          ]
+        },
+        {
+          "nazwa": "radomszczański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RA"
+          ],
+          "pelne_kody": [
+            "ERA"
+          ]
+        },
+        {
+          "nazwa": "rawski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RW"
+          ],
+          "pelne_kody": [
+            "ERW"
+          ]
+        },
+        {
+          "nazwa": "sieradzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SI"
+          ],
+          "pelne_kody": [
+            "ESI"
+          ]
+        },
+        {
+          "nazwa": "skierniewicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SK"
+          ],
+          "pelne_kody": [
+            "ESK"
+          ]
+        },
+        {
+          "nazwa": "tomaszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TM"
+          ],
+          "pelne_kody": [
+            "ETM"
+          ]
+        },
+        {
+          "nazwa": "wieluński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WI"
+          ],
+          "pelne_kody": [
+            "EWI"
+          ]
+        },
+        {
+          "nazwa": "wieruszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WE"
+          ],
+          "pelne_kody": [
+            "EWE"
+          ]
+        },
+        {
+          "nazwa": "zduńskowolski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZD"
+          ],
+          "pelne_kody": [
+            "EZD"
+          ]
+        },
+        {
+          "nazwa": "zgierski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZG"
+          ],
+          "pelne_kody": [
+            "EZG"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "małopolskie",
+      "wyroznik_wojewodztwa": [
+        "K",
+        "J"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Kraków",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "R",
+            "K"
+          ],
+          "pelne_kody": [
+            "KR",
+            "KK",
+            "JR",
+            "JK"
+          ]
+        },
+        {
+          "nazwa": "Nowy Sącz",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "N"
+          ],
+          "pelne_kody": [
+            "KN",
+            "JN"
+          ]
+        },
+        {
+          "nazwa": "Tarnów",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "T"
+          ],
+          "pelne_kody": [
+            "KT",
+            "JT"
+          ]
+        },
+        {
+          "nazwa": "bocheński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BC",
+            "BA"
+          ],
+          "pelne_kody": [
+            "KBC",
+            "KBA",
+            "JBC",
+            "JBA"
+          ]
+        },
+        {
+          "nazwa": "brzeski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BR"
+          ],
+          "pelne_kody": [
+            "KBR",
+            "JBR"
+          ]
+        },
+        {
+          "nazwa": "chrzanowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CH"
+          ],
+          "pelne_kody": [
+            "KCH",
+            "JCH"
+          ]
+        },
+        {
+          "nazwa": "dąbrowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "DA"
+          ],
+          "pelne_kody": [
+            "KDA",
+            "JDA"
+          ]
+        },
+        {
+          "nazwa": "gorlicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GR"
+          ],
+          "pelne_kody": [
+            "KGR",
+            "JGR"
+          ]
+        },
+        {
+          "nazwa": "krakowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RA",
+            "RK"
+          ],
+          "pelne_kody": [
+            "KRA",
+            "KRK",
+            "JRA",
+            "JRK"
+          ]
+        },
+        {
+          "nazwa": "limanowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LI"
+          ],
+          "pelne_kody": [
+            "KLI",
+            "JLI"
+          ]
+        },
+        {
+          "nazwa": "miechowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MI"
+          ],
+          "pelne_kody": [
+            "KMI",
+            "JMI"
+          ]
+        },
+        {
+          "nazwa": "myślenicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MY"
+          ],
+          "pelne_kody": [
+            "KMY",
+            "JMY"
+          ]
+        },
+        {
+          "nazwa": "nowosądecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NS"
+          ],
+          "pelne_kody": [
+            "KNS",
+            "JNS"
+          ]
+        },
+        {
+          "nazwa": "nowotarski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NT"
+          ],
+          "pelne_kody": [
+            "KNT",
+            "JNT"
+          ]
+        },
+        {
+          "nazwa": "olkuski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OL"
+          ],
+          "pelne_kody": [
+            "KOL",
+            "JOL"
+          ]
+        },
+        {
+          "nazwa": "oświęcimski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OS"
+          ],
+          "pelne_kody": [
+            "KOS",
+            "JOS"
+          ]
+        },
+        {
+          "nazwa": "proszowicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PR"
+          ],
+          "pelne_kody": [
+            "KPR",
+            "JPR"
+          ]
+        },
+        {
+          "nazwa": "suski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SU"
+          ],
+          "pelne_kody": [
+            "KSU",
+            "JSU"
+          ]
+        },
+        {
+          "nazwa": "tarnowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TA"
+          ],
+          "pelne_kody": [
+            "KTA",
+            "JTA"
+          ]
+        },
+        {
+          "nazwa": "tatrzański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TT"
+          ],
+          "pelne_kody": [
+            "KTT",
+            "JTT"
+          ]
+        },
+        {
+          "nazwa": "wadowicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WA"
+          ],
+          "pelne_kody": [
+            "KWA",
+            "JWA"
+          ]
+        },
+        {
+          "nazwa": "wielicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WI"
+          ],
+          "pelne_kody": [
+            "KWI",
+            "JWI"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "mazowieckie",
+      "wyroznik_wojewodztwa": [
+        "W",
+        "A"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Ostrołęka",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "O"
+          ],
+          "pelne_kody": [
+            "WO",
+            "AO"
+          ]
+        },
+        {
+          "nazwa": "Płock",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "P"
+          ],
+          "pelne_kody": [
+            "WP",
+            "AP"
+          ]
+        },
+        {
+          "nazwa": "Radom",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "R"
+          ],
+          "pelne_kody": [
+            "WR",
+            "AR"
+          ]
+        },
+        {
+          "nazwa": "Siedlce",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "S"
+          ],
+          "pelne_kody": [
+            "WS",
+            "AS"
+          ]
+        },
+        {
+          "nazwa": "białobrzeski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BR"
+          ],
+          "pelne_kody": [
+            "WBR",
+            "ABR"
+          ]
+        },
+        {
+          "nazwa": "ciechanowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CI"
+          ],
+          "pelne_kody": [
+            "WCI",
+            "ACI"
+          ]
+        },
+        {
+          "nazwa": "garwoliński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "G"
+          ],
+          "pelne_kody": [
+            "WG",
+            "AG"
+          ]
+        },
+        {
+          "nazwa": "gostyniński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GS"
+          ],
+          "pelne_kody": [
+            "WGS",
+            "AGS"
+          ]
+        },
+        {
+          "nazwa": "grodziski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GM"
+          ],
+          "pelne_kody": [
+            "WGM",
+            "AGM"
+          ]
+        },
+        {
+          "nazwa": "grójecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GR"
+          ],
+          "pelne_kody": [
+            "WGR",
+            "AGR"
+          ]
+        },
+        {
+          "nazwa": "kozienicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KZ"
+          ],
+          "pelne_kody": [
+            "WKZ",
+            "AKZ"
+          ]
+        },
+        {
+          "nazwa": "legionowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "L"
+          ],
+          "pelne_kody": [
+            "WL",
+            "AL"
+          ]
+        },
+        {
+          "nazwa": "lipski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LI"
+          ],
+          "pelne_kody": [
+            "WLI",
+            "ALI"
+          ]
+        },
+        {
+          "nazwa": "łosicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LS"
+          ],
+          "pelne_kody": [
+            "WLS",
+            "ALS"
+          ]
+        },
+        {
+          "nazwa": "makowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MA"
+          ],
+          "pelne_kody": [
+            "WMA",
+            "AMA"
+          ]
+        },
+        {
+          "nazwa": "miński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "M"
+          ],
+          "pelne_kody": [
+            "WM",
+            "AM"
+          ]
+        },
+        {
+          "nazwa": "mławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ML"
+          ],
+          "pelne_kody": [
+            "WML",
+            "AML"
+          ]
+        },
+        {
+          "nazwa": "nowodworski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ND"
+          ],
+          "pelne_kody": [
+            "WND",
+            "AND"
+          ]
+        },
+        {
+          "nazwa": "ostrołęcki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OS"
+          ],
+          "pelne_kody": [
+            "WOS",
+            "AOS"
+          ]
+        },
+        {
+          "nazwa": "ostrowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OR"
+          ],
+          "pelne_kody": [
+            "WOR",
+            "AOR"
+          ]
+        },
+        {
+          "nazwa": "otwocki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OT"
+          ],
+          "pelne_kody": [
+            "WOT",
+            "AOT"
+          ]
+        },
+        {
+          "nazwa": "piaseczyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PI",
+            "PA",
+            "PW",
+            "PX"
+          ],
+          "pelne_kody": [
+            "WPI",
+            "WPA",
+            "WPW",
+            "WPX",
+            "API",
+            "APA",
+            "APW",
+            "APX"
+          ]
+        },
+        {
+          "nazwa": "płocki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PL"
+          ],
+          "pelne_kody": [
+            "WPL",
+            "APL"
+          ]
+        },
+        {
+          "nazwa": "płoński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PN"
+          ],
+          "pelne_kody": [
+            "WPN",
+            "APN"
+          ]
+        },
+        {
+          "nazwa": "pruszkowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PR",
+            "PP",
+            "PS"
+          ],
+          "pelne_kody": [
+            "WPR",
+            "WPP",
+            "WPS",
+            "APR",
+            "APP",
+            "APS"
+          ]
+        },
+        {
+          "nazwa": "przasnyski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PZ"
+          ],
+          "pelne_kody": [
+            "WPZ",
+            "APZ"
+          ]
+        },
+        {
+          "nazwa": "przysuski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PY"
+          ],
+          "pelne_kody": [
+            "WPY",
+            "APY"
+          ]
+        },
+        {
+          "nazwa": "pułtuski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PU"
+          ],
+          "pelne_kody": [
+            "WPU",
+            "APU"
+          ]
+        },
+        {
+          "nazwa": "radomski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RA"
+          ],
+          "pelne_kody": [
+            "WRA",
+            "ARA"
+          ]
+        },
+        {
+          "nazwa": "siedlecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SI"
+          ],
+          "pelne_kody": [
+            "WSI",
+            "ASI"
+          ]
+        },
+        {
+          "nazwa": "sierpecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SE"
+          ],
+          "pelne_kody": [
+            "WSE",
+            "ASE"
+          ]
+        },
+        {
+          "nazwa": "sochaczewski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SC"
+          ],
+          "pelne_kody": [
+            "WSC",
+            "ASC"
+          ]
+        },
+        {
+          "nazwa": "sokołowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SK"
+          ],
+          "pelne_kody": [
+            "WSK",
+            "ASK"
+          ]
+        },
+        {
+          "nazwa": "szydłowiecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SZ"
+          ],
+          "pelne_kody": [
+            "WSZ",
+            "ASZ"
+          ]
+        },
+        {
+          "nazwa": "m.st. Warszawa",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "A",
+            "B",
+            "D",
+            "E",
+            "F",
+            "H",
+            "I",
+            "J",
+            "K",
+            "N",
+            "T",
+            "U",
+            "W",
+            "X",
+            "Y"
+          ],
+          "pelne_kody": [
+            "WA",
+            "WB",
+            "WD",
+            "WE",
+            "WF",
+            "WH",
+            "WI",
+            "WJ",
+            "WK",
+            "WN",
+            "WT",
+            "WU",
+            "WW",
+            "WX",
+            "WY",
+            "AA",
+            "AB",
+            "AD",
+            "AE",
+            "AF",
+            "AH",
+            "AI",
+            "AJ",
+            "AK",
+            "AN",
+            "AT",
+            "AU",
+            "AW",
+            "AX",
+            "AY"
+          ],
+          "uwaga": "Każda litera w 'wyroznik_powiatu' odpowiada dzielnicy (np. B=Bemowo, D=Bielany, E=Mokotów, N=Ochota, H=Praga Płn., F=Praga Płd., W/inne=Rembertów/Wilanów/Włochy (współdzielone, rozróżniane końcówką numeru), I=Śródmieście, J=Targówek, K=Ursus, N=Ursynów [współdzielone z Ochotą przez inny wariant], T=Wawer, U=Ochota/Ursynów warianty historyczne, X/Y=Wesoła/Żoliborz/Wola — pełna, szczegółowa lista końcówek wykracza poza ten plik). Kod 'A' + litera dzielnicy (np. AE dla Mokotowa) to nowa pula uruchamiana od 2023-2024, gdy pula 'W' + litera się wyczerpuje w danej dzielnicy — widoczne w polu 'pelne_kody'. NIEZALEŻNIE od tego, na tablicach ZMNIEJSZONYCH (4-znakowych, tzw. 'krótkich'/'amerykańskich') wyróżnikiem miejsca dla całej Warszawy jest WYŁĄCZNIE jedna litera województwa (W, a od ok. 2023 r. również samo A) — BEZ litery dzielnicy. To odrębna, równoległa pula numeracji, nieujęta w kombinacjach 'pelne_kody' poniżej."
+        },
+        {
+          "nazwa": "warszawski zachodni",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "Z"
+          ],
+          "pelne_kody": [
+            "WZ",
+            "AZ"
+          ]
+        },
+        {
+          "nazwa": "węgrowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WE"
+          ],
+          "pelne_kody": [
+            "WWE",
+            "AWE"
+          ]
+        },
+        {
+          "nazwa": "wołomiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WL",
+            "V"
+          ],
+          "pelne_kody": [
+            "WWL",
+            "WV",
+            "AWL",
+            "AV"
+          ]
+        },
+        {
+          "nazwa": "wyszkowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WY"
+          ],
+          "pelne_kody": [
+            "WWY",
+            "AWY"
+          ]
+        },
+        {
+          "nazwa": "zwoleński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZW"
+          ],
+          "pelne_kody": [
+            "WZW",
+            "AZW"
+          ]
+        },
+        {
+          "nazwa": "żuromiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZU"
+          ],
+          "pelne_kody": [
+            "WZU",
+            "AZU"
+          ]
+        },
+        {
+          "nazwa": "żyrardowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZY"
+          ],
+          "pelne_kody": [
+            "WZY",
+            "AZY"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "opolskie",
+      "wyroznik_wojewodztwa": [
+        "O"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Opole",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "P"
+          ],
+          "pelne_kody": [
+            "OP"
+          ]
+        },
+        {
+          "nazwa": "brzeski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "B"
+          ],
+          "pelne_kody": [
+            "OB"
+          ]
+        },
+        {
+          "nazwa": "głubczycki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GL"
+          ],
+          "pelne_kody": [
+            "OGL"
+          ]
+        },
+        {
+          "nazwa": "kędzierzyńsko-kozielski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "K"
+          ],
+          "pelne_kody": [
+            "OK"
+          ]
+        },
+        {
+          "nazwa": "kluczborski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KL"
+          ],
+          "pelne_kody": [
+            "OKL"
+          ]
+        },
+        {
+          "nazwa": "krapkowicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KR"
+          ],
+          "pelne_kody": [
+            "OKR"
+          ]
+        },
+        {
+          "nazwa": "namysłowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NA"
+          ],
+          "pelne_kody": [
+            "ONA"
+          ]
+        },
+        {
+          "nazwa": "nyski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NY"
+          ],
+          "pelne_kody": [
+            "ONY"
+          ]
+        },
+        {
+          "nazwa": "oleski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OL"
+          ],
+          "pelne_kody": [
+            "OOL"
+          ]
+        },
+        {
+          "nazwa": "opolski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PO"
+          ],
+          "pelne_kody": [
+            "OPO"
+          ]
+        },
+        {
+          "nazwa": "prudnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PR"
+          ],
+          "pelne_kody": [
+            "OPR"
+          ]
+        },
+        {
+          "nazwa": "strzelecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ST"
+          ],
+          "pelne_kody": [
+            "OST"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "podkarpackie",
+      "wyroznik_wojewodztwa": [
+        "R",
+        "Y"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Krosno",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "K"
+          ],
+          "pelne_kody": [
+            "RK",
+            "YK"
+          ]
+        },
+        {
+          "nazwa": "Przemyśl",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "P"
+          ],
+          "pelne_kody": [
+            "RP",
+            "YP"
+          ]
+        },
+        {
+          "nazwa": "Rzeszów",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "Z"
+          ],
+          "pelne_kody": [
+            "RZ",
+            "YZ"
+          ]
+        },
+        {
+          "nazwa": "Tarnobrzeg",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "T"
+          ],
+          "pelne_kody": [
+            "RT",
+            "YT"
+          ]
+        },
+        {
+          "nazwa": "bieszczadzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BI"
+          ],
+          "pelne_kody": [
+            "RBI",
+            "YBI"
+          ]
+        },
+        {
+          "nazwa": "brzozowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BR"
+          ],
+          "pelne_kody": [
+            "RBR",
+            "YBR"
+          ]
+        },
+        {
+          "nazwa": "dębicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "DE"
+          ],
+          "pelne_kody": [
+            "RDE",
+            "YDE"
+          ]
+        },
+        {
+          "nazwa": "jarosławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "JA"
+          ],
+          "pelne_kody": [
+            "RJA",
+            "YJA"
+          ]
+        },
+        {
+          "nazwa": "jasielski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "JS"
+          ],
+          "pelne_kody": [
+            "RJS",
+            "YJS"
+          ]
+        },
+        {
+          "nazwa": "kolbuszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KL"
+          ],
+          "pelne_kody": [
+            "RKL",
+            "YKL"
+          ]
+        },
+        {
+          "nazwa": "krośnieński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KR"
+          ],
+          "pelne_kody": [
+            "RKR",
+            "YKR"
+          ]
+        },
+        {
+          "nazwa": "leski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LS"
+          ],
+          "pelne_kody": [
+            "RLS",
+            "YLS"
+          ]
+        },
+        {
+          "nazwa": "leżajski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LE"
+          ],
+          "pelne_kody": [
+            "RLE",
+            "YLE"
+          ]
+        },
+        {
+          "nazwa": "lubaczowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LU"
+          ],
+          "pelne_kody": [
+            "RLU",
+            "YLU"
+          ]
+        },
+        {
+          "nazwa": "łańcucki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LA"
+          ],
+          "pelne_kody": [
+            "RLA",
+            "YLA"
+          ]
+        },
+        {
+          "nazwa": "mielecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MI"
+          ],
+          "pelne_kody": [
+            "RMI",
+            "YMI"
+          ]
+        },
+        {
+          "nazwa": "niżański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NI"
+          ],
+          "pelne_kody": [
+            "RNI",
+            "YNI"
+          ]
+        },
+        {
+          "nazwa": "przemyski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PR"
+          ],
+          "pelne_kody": [
+            "RPR",
+            "YPR"
+          ]
+        },
+        {
+          "nazwa": "przeworski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PZ"
+          ],
+          "pelne_kody": [
+            "RPZ",
+            "YPZ"
+          ]
+        },
+        {
+          "nazwa": "ropczycko-sędziszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RS"
+          ],
+          "pelne_kody": [
+            "RRS",
+            "YRS"
+          ]
+        },
+        {
+          "nazwa": "rzeszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZE",
+            "ZZ",
+            "ZR"
+          ],
+          "pelne_kody": [
+            "RZE",
+            "RZZ",
+            "RZR",
+            "YZE",
+            "YZZ",
+            "YZR"
+          ]
+        },
+        {
+          "nazwa": "sanocki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SA"
+          ],
+          "pelne_kody": [
+            "RSA",
+            "YSA"
+          ]
+        },
+        {
+          "nazwa": "stalowowolski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ST"
+          ],
+          "pelne_kody": [
+            "RST",
+            "YST"
+          ]
+        },
+        {
+          "nazwa": "strzyżowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SR"
+          ],
+          "pelne_kody": [
+            "RSR",
+            "YSR"
+          ]
+        },
+        {
+          "nazwa": "tarnobrzeski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TA"
+          ],
+          "pelne_kody": [
+            "RTA",
+            "YTA"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "podlaskie",
+      "wyroznik_wojewodztwa": [
+        "B"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Białystok",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "I"
+          ],
+          "pelne_kody": [
+            "BI"
+          ]
+        },
+        {
+          "nazwa": "Łomża",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "L"
+          ],
+          "pelne_kody": [
+            "BL"
+          ]
+        },
+        {
+          "nazwa": "Suwałki",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "S"
+          ],
+          "pelne_kody": [
+            "BS"
+          ]
+        },
+        {
+          "nazwa": "augustowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "AU"
+          ],
+          "pelne_kody": [
+            "BAU"
+          ]
+        },
+        {
+          "nazwa": "białostocki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "IA",
+            "IB"
+          ],
+          "pelne_kody": [
+            "BIA",
+            "BIB"
+          ]
+        },
+        {
+          "nazwa": "bielski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BI"
+          ],
+          "pelne_kody": [
+            "BBI"
+          ]
+        },
+        {
+          "nazwa": "grajewski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GR"
+          ],
+          "pelne_kody": [
+            "BGR"
+          ]
+        },
+        {
+          "nazwa": "hajnowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "HA"
+          ],
+          "pelne_kody": [
+            "BHA"
+          ]
+        },
+        {
+          "nazwa": "kolneński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KL"
+          ],
+          "pelne_kody": [
+            "BKL"
+          ]
+        },
+        {
+          "nazwa": "łomżyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LM"
+          ],
+          "pelne_kody": [
+            "BLM"
+          ]
+        },
+        {
+          "nazwa": "moniecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MN"
+          ],
+          "pelne_kody": [
+            "BMN"
+          ]
+        },
+        {
+          "nazwa": "sejneński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SE"
+          ],
+          "pelne_kody": [
+            "BSE"
+          ]
+        },
+        {
+          "nazwa": "siemiatycki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SI"
+          ],
+          "pelne_kody": [
+            "BSI"
+          ]
+        },
+        {
+          "nazwa": "sokólski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SK"
+          ],
+          "pelne_kody": [
+            "BSK"
+          ]
+        },
+        {
+          "nazwa": "suwalski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SU"
+          ],
+          "pelne_kody": [
+            "BSU"
+          ]
+        },
+        {
+          "nazwa": "wysokomazowiecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WM"
+          ],
+          "pelne_kody": [
+            "BWM"
+          ]
+        },
+        {
+          "nazwa": "zambrowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZA"
+          ],
+          "pelne_kody": [
+            "BZA"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "pomorskie",
+      "wyroznik_wojewodztwa": [
+        "G",
+        "X"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Gdańsk",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "D"
+          ],
+          "pelne_kody": [
+            "GD",
+            "XD"
+          ]
+        },
+        {
+          "nazwa": "Gdynia",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "A"
+          ],
+          "pelne_kody": [
+            "GA",
+            "XA"
+          ]
+        },
+        {
+          "nazwa": "Słupsk",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "S"
+          ],
+          "pelne_kody": [
+            "GS",
+            "XS"
+          ]
+        },
+        {
+          "nazwa": "Sopot",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "SP"
+          ],
+          "pelne_kody": [
+            "GSP",
+            "XSP"
+          ]
+        },
+        {
+          "nazwa": "bytowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BY"
+          ],
+          "pelne_kody": [
+            "GBY",
+            "XBY"
+          ]
+        },
+        {
+          "nazwa": "chojnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CH"
+          ],
+          "pelne_kody": [
+            "GCH",
+            "XCH"
+          ]
+        },
+        {
+          "nazwa": "człuchowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CZ"
+          ],
+          "pelne_kody": [
+            "GCZ",
+            "XCZ"
+          ]
+        },
+        {
+          "nazwa": "gdański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "DA"
+          ],
+          "pelne_kody": [
+            "GDA",
+            "XDA"
+          ]
+        },
+        {
+          "nazwa": "kartuski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KA",
+            "KY",
+            "KZ"
+          ],
+          "pelne_kody": [
+            "GKA",
+            "GKY",
+            "GKZ",
+            "XKA",
+            "XKY",
+            "XKZ"
+          ]
+        },
+        {
+          "nazwa": "kościerski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KS"
+          ],
+          "pelne_kody": [
+            "GKS",
+            "XKS"
+          ]
+        },
+        {
+          "nazwa": "kwidzyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KW"
+          ],
+          "pelne_kody": [
+            "GKW",
+            "XKW"
+          ]
+        },
+        {
+          "nazwa": "lęborski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LE"
+          ],
+          "pelne_kody": [
+            "GLE",
+            "XLE"
+          ]
+        },
+        {
+          "nazwa": "malborski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MB"
+          ],
+          "pelne_kody": [
+            "GMB",
+            "XMB"
+          ]
+        },
+        {
+          "nazwa": "nowodworski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ND"
+          ],
+          "pelne_kody": [
+            "GND",
+            "XND"
+          ]
+        },
+        {
+          "nazwa": "pucki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PU"
+          ],
+          "pelne_kody": [
+            "GPU",
+            "XPU"
+          ]
+        },
+        {
+          "nazwa": "słupski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SL"
+          ],
+          "pelne_kody": [
+            "GSL",
+            "XSL"
+          ]
+        },
+        {
+          "nazwa": "starogardzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ST"
+          ],
+          "pelne_kody": [
+            "GST",
+            "XST"
+          ]
+        },
+        {
+          "nazwa": "sztumski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SZ"
+          ],
+          "pelne_kody": [
+            "GSZ",
+            "XSZ"
+          ]
+        },
+        {
+          "nazwa": "tczewski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TC"
+          ],
+          "pelne_kody": [
+            "GTC",
+            "XTC"
+          ]
+        },
+        {
+          "nazwa": "wejherowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WE",
+            "WO"
+          ],
+          "pelne_kody": [
+            "GWE",
+            "GWO",
+            "XWE",
+            "XWO"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "śląskie",
+      "wyroznik_wojewodztwa": [
+        "S",
+        "I"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Bielsko-Biała",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "B"
+          ],
+          "pelne_kody": [
+            "SB",
+            "IB"
+          ]
+        },
+        {
+          "nazwa": "Bytom",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "Y"
+          ],
+          "pelne_kody": [
+            "SY",
+            "IY"
+          ]
+        },
+        {
+          "nazwa": "Chorzów",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "H"
+          ],
+          "pelne_kody": [
+            "SH",
+            "IH"
+          ]
+        },
+        {
+          "nazwa": "Częstochowa",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "C"
+          ],
+          "pelne_kody": [
+            "SC",
+            "IC"
+          ]
+        },
+        {
+          "nazwa": "Dąbrowa Górnicza",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "D"
+          ],
+          "pelne_kody": [
+            "SD",
+            "ID"
+          ]
+        },
+        {
+          "nazwa": "Gliwice",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "G"
+          ],
+          "pelne_kody": [
+            "SG",
+            "IG"
+          ]
+        },
+        {
+          "nazwa": "Jastrzębie-Zdrój",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "JZ"
+          ],
+          "pelne_kody": [
+            "SJZ",
+            "IJZ"
+          ]
+        },
+        {
+          "nazwa": "Jaworzno",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "J"
+          ],
+          "pelne_kody": [
+            "SJ",
+            "IJ"
+          ]
+        },
+        {
+          "nazwa": "Katowice",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "K"
+          ],
+          "pelne_kody": [
+            "SK",
+            "IK"
+          ]
+        },
+        {
+          "nazwa": "Mysłowice",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "M"
+          ],
+          "pelne_kody": [
+            "SM",
+            "IM"
+          ]
+        },
+        {
+          "nazwa": "Piekary Śląskie",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "PI"
+          ],
+          "pelne_kody": [
+            "SPI",
+            "IPI"
+          ]
+        },
+        {
+          "nazwa": "Ruda Śląska",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "RS",
+            "L"
+          ],
+          "pelne_kody": [
+            "SRS",
+            "SL",
+            "IRS",
+            "IL"
+          ]
+        },
+        {
+          "nazwa": "Rybnik",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "R"
+          ],
+          "pelne_kody": [
+            "SR",
+            "IR"
+          ]
+        },
+        {
+          "nazwa": "Siemianowice Śląskie",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "I"
+          ],
+          "pelne_kody": [
+            "SI",
+            "II"
+          ]
+        },
+        {
+          "nazwa": "Sosnowiec",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "O"
+          ],
+          "pelne_kody": [
+            "SO",
+            "IO"
+          ]
+        },
+        {
+          "nazwa": "Świętochłowice",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "W"
+          ],
+          "pelne_kody": [
+            "SW",
+            "IW"
+          ]
+        },
+        {
+          "nazwa": "Tychy",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "T"
+          ],
+          "pelne_kody": [
+            "ST",
+            "IT"
+          ]
+        },
+        {
+          "nazwa": "Zabrze",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "Z"
+          ],
+          "pelne_kody": [
+            "SZ",
+            "IZ"
+          ]
+        },
+        {
+          "nazwa": "Żory",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "ZO"
+          ],
+          "pelne_kody": [
+            "SZO",
+            "IZO"
+          ]
+        },
+        {
+          "nazwa": "będziński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BE",
+            "E",
+            "BN"
+          ],
+          "pelne_kody": [
+            "SBE",
+            "SE",
+            "SBN",
+            "IBE",
+            "IE",
+            "IBN"
+          ]
+        },
+        {
+          "nazwa": "bielski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BI"
+          ],
+          "pelne_kody": [
+            "SBI",
+            "IBI"
+          ]
+        },
+        {
+          "nazwa": "cieszyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CI",
+            "CN"
+          ],
+          "pelne_kody": [
+            "SCI",
+            "SCN",
+            "ICI",
+            "ICN"
+          ]
+        },
+        {
+          "nazwa": "częstochowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CZ"
+          ],
+          "pelne_kody": [
+            "SCZ",
+            "ICZ"
+          ]
+        },
+        {
+          "nazwa": "gliwicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GL"
+          ],
+          "pelne_kody": [
+            "SGL",
+            "IGL"
+          ]
+        },
+        {
+          "nazwa": "kłobucki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KL"
+          ],
+          "pelne_kody": [
+            "SKL",
+            "IKL"
+          ]
+        },
+        {
+          "nazwa": "lubliniecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LU"
+          ],
+          "pelne_kody": [
+            "SLU",
+            "ILU"
+          ]
+        },
+        {
+          "nazwa": "mikołowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MI"
+          ],
+          "pelne_kody": [
+            "SMI",
+            "IMI"
+          ]
+        },
+        {
+          "nazwa": "myszkowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MY"
+          ],
+          "pelne_kody": [
+            "SMY",
+            "IMY"
+          ]
+        },
+        {
+          "nazwa": "pszczyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PS"
+          ],
+          "pelne_kody": [
+            "SPS",
+            "IPS"
+          ]
+        },
+        {
+          "nazwa": "raciborski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RC"
+          ],
+          "pelne_kody": [
+            "SRC",
+            "IRC"
+          ]
+        },
+        {
+          "nazwa": "rybnicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RB"
+          ],
+          "pelne_kody": [
+            "SRB",
+            "IRB"
+          ]
+        },
+        {
+          "nazwa": "tarnogórski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TA",
+            "TR",
+            "TN"
+          ],
+          "pelne_kody": [
+            "STA",
+            "STR",
+            "STN",
+            "ITA",
+            "ITR",
+            "ITN"
+          ],
+          "wyroznik_powiatu_2026": [
+            "TR",
+            "TN"
+          ],
+          "uwaga": "Wyróżniki STR/ITR i STN/ITN wprowadzone w 2026 r. jako dodatkowe do dotychczasowych STA (i ITA dla pojazdów zabytkowych) — pula STA/ITA się wyczerpała."
+        },
+        {
+          "nazwa": "bieruńsko-lędziński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BL"
+          ],
+          "pelne_kody": [
+            "SBL",
+            "IBL"
+          ]
+        },
+        {
+          "nazwa": "wodzisławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WD",
+            "WZ"
+          ],
+          "pelne_kody": [
+            "SWD",
+            "SWZ",
+            "IWD",
+            "IWZ"
+          ]
+        },
+        {
+          "nazwa": "zawierciański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZA"
+          ],
+          "pelne_kody": [
+            "SZA",
+            "IZA"
+          ]
+        },
+        {
+          "nazwa": "żywiecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZY"
+          ],
+          "pelne_kody": [
+            "SZY",
+            "IZY"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "świętokrzyskie",
+      "wyroznik_wojewodztwa": [
+        "T"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Kielce",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "K"
+          ],
+          "pelne_kody": [
+            "TK"
+          ]
+        },
+        {
+          "nazwa": "buski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BU"
+          ],
+          "pelne_kody": [
+            "TBU"
+          ]
+        },
+        {
+          "nazwa": "jędrzejowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "JE"
+          ],
+          "pelne_kody": [
+            "TJE"
+          ]
+        },
+        {
+          "nazwa": "kazimierski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KA"
+          ],
+          "pelne_kody": [
+            "TKA"
+          ]
+        },
+        {
+          "nazwa": "kielecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KI",
+            "KC",
+            "KM",
+            "KP"
+          ],
+          "pelne_kody": [
+            "TKI",
+            "TKC",
+            "TKM",
+            "TKP"
+          ]
+        },
+        {
+          "nazwa": "konecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KN"
+          ],
+          "pelne_kody": [
+            "TKN"
+          ]
+        },
+        {
+          "nazwa": "opatowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OP"
+          ],
+          "pelne_kody": [
+            "TOP"
+          ]
+        },
+        {
+          "nazwa": "ostrowiecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OS"
+          ],
+          "pelne_kody": [
+            "TOS"
+          ]
+        },
+        {
+          "nazwa": "pińczowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PI"
+          ],
+          "pelne_kody": [
+            "TPI"
+          ]
+        },
+        {
+          "nazwa": "sandomierski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SA"
+          ],
+          "pelne_kody": [
+            "TSA"
+          ]
+        },
+        {
+          "nazwa": "skarżyski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SK"
+          ],
+          "pelne_kody": [
+            "TSK"
+          ]
+        },
+        {
+          "nazwa": "starachowicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ST"
+          ],
+          "pelne_kody": [
+            "TST"
+          ]
+        },
+        {
+          "nazwa": "staszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SZ"
+          ],
+          "pelne_kody": [
+            "TSZ"
+          ]
+        },
+        {
+          "nazwa": "włoszczowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LW"
+          ],
+          "pelne_kody": [
+            "TLW"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "warmińsko-mazurskie",
+      "wyroznik_wojewodztwa": [
+        "N"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Elbląg",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "E"
+          ],
+          "pelne_kody": [
+            "NE"
+          ]
+        },
+        {
+          "nazwa": "Olsztyn",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "O"
+          ],
+          "pelne_kody": [
+            "NO"
+          ]
+        },
+        {
+          "nazwa": "bartoszycki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BA"
+          ],
+          "pelne_kody": [
+            "NBA"
+          ]
+        },
+        {
+          "nazwa": "braniewski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BR"
+          ],
+          "pelne_kody": [
+            "NBR"
+          ]
+        },
+        {
+          "nazwa": "działdowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "DZ"
+          ],
+          "pelne_kody": [
+            "NDZ"
+          ]
+        },
+        {
+          "nazwa": "elbląski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "EB"
+          ],
+          "pelne_kody": [
+            "NEB"
+          ]
+        },
+        {
+          "nazwa": "ełcki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "EL"
+          ],
+          "pelne_kody": [
+            "NEL"
+          ]
+        },
+        {
+          "nazwa": "giżycki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GI"
+          ],
+          "pelne_kody": [
+            "NGI"
+          ]
+        },
+        {
+          "nazwa": "iławski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "IL"
+          ],
+          "pelne_kody": [
+            "NIL"
+          ]
+        },
+        {
+          "nazwa": "kętrzyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KE"
+          ],
+          "pelne_kody": [
+            "NKE"
+          ]
+        },
+        {
+          "nazwa": "lidzbarski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LI"
+          ],
+          "pelne_kody": [
+            "NLI"
+          ]
+        },
+        {
+          "nazwa": "mrągowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MR"
+          ],
+          "pelne_kody": [
+            "NMR"
+          ]
+        },
+        {
+          "nazwa": "nidzicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NI"
+          ],
+          "pelne_kody": [
+            "NNI"
+          ]
+        },
+        {
+          "nazwa": "nowomiejski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NM"
+          ],
+          "pelne_kody": [
+            "NNM"
+          ]
+        },
+        {
+          "nazwa": "olecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OE"
+          ],
+          "pelne_kody": [
+            "NOE"
+          ]
+        },
+        {
+          "nazwa": "gołdapski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GO"
+          ],
+          "pelne_kody": [
+            "NGO"
+          ]
+        },
+        {
+          "nazwa": "olsztyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OL"
+          ],
+          "pelne_kody": [
+            "NOL"
+          ]
+        },
+        {
+          "nazwa": "ostródzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OS",
+            "OT",
+            "OX"
+          ],
+          "pelne_kody": [
+            "NOS",
+            "NOT",
+            "NOX"
+          ]
+        },
+        {
+          "nazwa": "piski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PI"
+          ],
+          "pelne_kody": [
+            "NPI"
+          ]
+        },
+        {
+          "nazwa": "szczycieński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SZ"
+          ],
+          "pelne_kody": [
+            "NSZ"
+          ]
+        },
+        {
+          "nazwa": "węgorzewski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WE"
+          ],
+          "pelne_kody": [
+            "NWE"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "wielkopolskie",
+      "wyroznik_wojewodztwa": [
+        "P",
+        "M"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Kalisz",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "K",
+            "A"
+          ],
+          "pelne_kody": [
+            "PK",
+            "PA",
+            "MK",
+            "MA"
+          ]
+        },
+        {
+          "nazwa": "Konin",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "KO",
+            "N"
+          ],
+          "pelne_kody": [
+            "PKO",
+            "PN",
+            "MKO",
+            "MN"
+          ]
+        },
+        {
+          "nazwa": "Leszno",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "L"
+          ],
+          "pelne_kody": [
+            "PL",
+            "ML"
+          ]
+        },
+        {
+          "nazwa": "Poznań",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "O",
+            "Y",
+            "X"
+          ],
+          "pelne_kody": [
+            "PO",
+            "PY",
+            "PX",
+            "MO",
+            "MY",
+            "MX"
+          ]
+        },
+        {
+          "nazwa": "chodzieski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CH"
+          ],
+          "pelne_kody": [
+            "PCH",
+            "MCH"
+          ]
+        },
+        {
+          "nazwa": "czarnkowsko-trzcianecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CT"
+          ],
+          "pelne_kody": [
+            "PCT",
+            "MCT"
+          ]
+        },
+        {
+          "nazwa": "gnieźnieński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GN"
+          ],
+          "pelne_kody": [
+            "PGN",
+            "MGN"
+          ]
+        },
+        {
+          "nazwa": "gostyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GS"
+          ],
+          "pelne_kody": [
+            "PGS",
+            "MGS"
+          ]
+        },
+        {
+          "nazwa": "grodziski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GO"
+          ],
+          "pelne_kody": [
+            "PGO",
+            "MGO"
+          ]
+        },
+        {
+          "nazwa": "jarociński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "JA"
+          ],
+          "pelne_kody": [
+            "PJA",
+            "MJA"
+          ]
+        },
+        {
+          "nazwa": "kaliski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KA"
+          ],
+          "pelne_kody": [
+            "PKA",
+            "MKA"
+          ]
+        },
+        {
+          "nazwa": "kępiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KE"
+          ],
+          "pelne_kody": [
+            "PKE",
+            "MKE"
+          ]
+        },
+        {
+          "nazwa": "kolski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KL"
+          ],
+          "pelne_kody": [
+            "PKL",
+            "MKL"
+          ]
+        },
+        {
+          "nazwa": "koniński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KN"
+          ],
+          "pelne_kody": [
+            "PKN",
+            "MKN"
+          ]
+        },
+        {
+          "nazwa": "kościański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KS"
+          ],
+          "pelne_kody": [
+            "PKS",
+            "MKS"
+          ]
+        },
+        {
+          "nazwa": "krotoszyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KR"
+          ],
+          "pelne_kody": [
+            "PKR",
+            "MKR"
+          ]
+        },
+        {
+          "nazwa": "leszczyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LE"
+          ],
+          "pelne_kody": [
+            "PLE",
+            "MLE"
+          ]
+        },
+        {
+          "nazwa": "międzychodzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MI"
+          ],
+          "pelne_kody": [
+            "PMI",
+            "MMI"
+          ]
+        },
+        {
+          "nazwa": "nowotomyski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "NT"
+          ],
+          "pelne_kody": [
+            "PNT",
+            "MNT"
+          ]
+        },
+        {
+          "nazwa": "obornicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OB"
+          ],
+          "pelne_kody": [
+            "POB",
+            "MOB"
+          ]
+        },
+        {
+          "nazwa": "ostrowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OS"
+          ],
+          "pelne_kody": [
+            "POS",
+            "MOS"
+          ]
+        },
+        {
+          "nazwa": "ostrzeszowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OT"
+          ],
+          "pelne_kody": [
+            "POT",
+            "MOT"
+          ]
+        },
+        {
+          "nazwa": "pilski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "P"
+          ],
+          "pelne_kody": [
+            "PP",
+            "MP"
+          ]
+        },
+        {
+          "nazwa": "pleszewski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PL"
+          ],
+          "pelne_kody": [
+            "PPL",
+            "MPL"
+          ]
+        },
+        {
+          "nazwa": "poznański",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "OZ",
+            "Z"
+          ],
+          "pelne_kody": [
+            "POZ",
+            "PZ",
+            "MOZ",
+            "MZ"
+          ]
+        },
+        {
+          "nazwa": "rawicki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "RA"
+          ],
+          "pelne_kody": [
+            "PRA",
+            "MRA"
+          ]
+        },
+        {
+          "nazwa": "słupecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SL"
+          ],
+          "pelne_kody": [
+            "PSL",
+            "MSL"
+          ]
+        },
+        {
+          "nazwa": "szamotulski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SZ"
+          ],
+          "pelne_kody": [
+            "PSZ",
+            "MSZ"
+          ]
+        },
+        {
+          "nazwa": "średzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SR"
+          ],
+          "pelne_kody": [
+            "PSR",
+            "MSR"
+          ]
+        },
+        {
+          "nazwa": "śremski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SE"
+          ],
+          "pelne_kody": [
+            "PSE",
+            "MSE"
+          ]
+        },
+        {
+          "nazwa": "turecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "TU"
+          ],
+          "pelne_kody": [
+            "PTU",
+            "MTU"
+          ]
+        },
+        {
+          "nazwa": "wągrowiecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WA"
+          ],
+          "pelne_kody": [
+            "PWA",
+            "MWA"
+          ]
+        },
+        {
+          "nazwa": "wolsztyński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WL"
+          ],
+          "pelne_kody": [
+            "PWL",
+            "MWL"
+          ]
+        },
+        {
+          "nazwa": "wrzesiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WR"
+          ],
+          "pelne_kody": [
+            "PWR",
+            "MWR"
+          ]
+        },
+        {
+          "nazwa": "złotowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ZL"
+          ],
+          "pelne_kody": [
+            "PZL",
+            "MZL"
+          ]
+        }
+      ]
+    },
+    {
+      "wojewodztwo": "zachodniopomorskie",
+      "wyroznik_wojewodztwa": [
+        "Z"
+      ],
+      "jednostki": [
+        {
+          "nazwa": "Koszalin",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "K"
+          ],
+          "pelne_kody": [
+            "ZK"
+          ]
+        },
+        {
+          "nazwa": "Szczecin",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "S",
+            "Z"
+          ],
+          "pelne_kody": [
+            "ZS",
+            "ZZ"
+          ]
+        },
+        {
+          "nazwa": "Świnoujście",
+          "typ": "miasto_na_prawach_powiatu",
+          "wyroznik_powiatu": [
+            "SW"
+          ],
+          "pelne_kody": [
+            "ZSW"
+          ]
+        },
+        {
+          "nazwa": "białogardzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "BI"
+          ],
+          "pelne_kody": [
+            "ZBI"
+          ]
+        },
+        {
+          "nazwa": "choszczeński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "CH"
+          ],
+          "pelne_kody": [
+            "ZCH"
+          ]
+        },
+        {
+          "nazwa": "drawski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "DR"
+          ],
+          "pelne_kody": [
+            "ZDR"
+          ]
+        },
+        {
+          "nazwa": "goleniowski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GL"
+          ],
+          "pelne_kody": [
+            "ZGL"
+          ]
+        },
+        {
+          "nazwa": "gryficki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GY"
+          ],
+          "pelne_kody": [
+            "ZGY"
+          ]
+        },
+        {
+          "nazwa": "gryfiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "GR"
+          ],
+          "pelne_kody": [
+            "ZGR"
+          ]
+        },
+        {
+          "nazwa": "kamieński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KA"
+          ],
+          "pelne_kody": [
+            "ZKA"
+          ]
+        },
+        {
+          "nazwa": "kołobrzeski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KL"
+          ],
+          "pelne_kody": [
+            "ZKL"
+          ]
+        },
+        {
+          "nazwa": "koszaliński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "KO"
+          ],
+          "pelne_kody": [
+            "ZKO"
+          ]
+        },
+        {
+          "nazwa": "łobeski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "LO"
+          ],
+          "pelne_kody": [
+            "ZLO"
+          ]
+        },
+        {
+          "nazwa": "myśliborski",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "MY"
+          ],
+          "pelne_kody": [
+            "ZMY"
+          ]
+        },
+        {
+          "nazwa": "policki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PL"
+          ],
+          "pelne_kody": [
+            "ZPL"
+          ]
+        },
+        {
+          "nazwa": "pyrzycki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "PY"
+          ],
+          "pelne_kody": [
+            "ZPY"
+          ]
+        },
+        {
+          "nazwa": "sławieński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SL"
+          ],
+          "pelne_kody": [
+            "ZSL"
+          ]
+        },
+        {
+          "nazwa": "stargardzki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "ST"
+          ],
+          "pelne_kody": [
+            "ZST"
+          ]
+        },
+        {
+          "nazwa": "szczecinecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SZ"
+          ],
+          "pelne_kody": [
+            "ZSZ"
+          ]
+        },
+        {
+          "nazwa": "świdwiński",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "SD"
+          ],
+          "pelne_kody": [
+            "ZSD"
+          ]
+        },
+        {
+          "nazwa": "wałecki",
+          "typ": "powiat",
+          "wyroznik_powiatu": [
+            "WA"
+          ],
+          "pelne_kody": [
+            "ZWA"
+          ]
+        }
+      ]
+    }
+  ]
+}
