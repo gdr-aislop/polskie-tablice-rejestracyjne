@@ -15,7 +15,8 @@ class PlateFilteringTest {
         PlateEntry("JR", "Kraków", "małopolskie", "miasto_na_prawach_powiatu"),
         PlateEntry("WA", "m.st. Warszawa", "mazowieckie", "miasto_na_prawach_powiatu"),
         PlateEntry("WAW", "m.st. Warszawa", "mazowieckie", "miasto_na_prawach_powiatu"),
-        PlateEntry("C", "przykład", "kujawsko-pomorskie", "test")
+        PlateEntry("C", "przykład", "kujawsko-pomorskie", "test"),
+        PlateEntry("DW", "Wrocław", "dolnośląskie", "miasto_na_prawach_powiatu")
     )
 
     @Test
@@ -36,12 +37,25 @@ class PlateFilteringTest {
     }
 
     @Test
-    fun `pusty query zwraca pelna posortowana liste`() {
-        val result = filterPlates(sampleEntries, "").map { it.kod }
+    fun `pusty query zwraca pelna liste posortowana wg wojewodztwa`() {
+        val result = filterPlates(sampleEntries, "")
 
         assertEquals(sampleEntries.size, result.size)
-        // najkrótsze kody na początku
-        assertEquals("C", result.first())
+
+        // grupy województw w kolejności alfabetycznej: dolnośląskie, kujawsko-pomorskie, małopolskie, mazowieckie
+        assertEquals(
+            listOf("dolnośląskie", "kujawsko-pomorskie", "małopolskie", "małopolskie", "małopolskie", "małopolskie", "mazowieckie", "mazowieckie"),
+            result.map { it.wojewodztwo }
+        )
+    }
+
+    @Test
+    fun `w obrebie wojewodztwa wynik posortowany od najkrotszych kodow`() {
+        val result = filterPlates(sampleEntries, "")
+            .filter { it.wojewodztwo == "małopolskie" }
+            .map { it.kod }
+
+        assertEquals(listOf("JR", "KR", "KRA", "KRK"), result)
     }
 
     @Test
